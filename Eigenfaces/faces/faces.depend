@@ -1,0 +1,20 @@
+# depslib dependency file v1.0
+1574261866 source:c:\users\acer\documents\github\reconocimiento-facial-usando-eigenfaces\eigenfaces\main.cpp
+	"reader.h"
+	"pca.h"
+
+1574261866 c:\users\acer\documents\github\reconocimiento-facial-usando-eigenfaces\eigenfaces\reader.h
+	<fstream>
+	<iostream>
+	<sstream>
+	<stdlib.h>
+
+1574261866 c:\users\acer\documents\github\reconocimiento-facial-usando-eigenfaces\eigenfaces\pca.h
+
+1574261866 source:c:\users\acer\documents\github\reconocimiento-facial-usando-eigenfaces\eigenfaces\pca.cpp
+	"pca.h"
+	"stdio.h"
+
+1574261866 source:c:\users\acer\documents\github\reconocimiento-facial-usando-eigenfaces\eigenfaces\reader.cpp
+	"reader.h"
+
