@@ -13,17 +13,20 @@ Pca::~Pca() {
 }
 
 //se invierte la matriz//
-void Pca::dat_mat(double **mat, double **tras, int rows, int cols) {
-    for(int i=0;i<cols;i++){
-        for(int j=0;j<rows;j++){
+void Pca::tras_mat(double **mat, double **tras, int rows, int cols) {
+    for (int i = 0; i <cols ; ++i) {
+        for (int j = 0; j <rows ; ++j) {
             tras[i][j]=0;
         }
     }
-    for(int i=0;i<cols;i++){
-        for(int j=0;j<rows;j++){
-            tras[i][j]=mat[j][i];
+    for(int i=0;i<rows;i++){
+        for(int j=0;j<cols;j++){
+
+            tras[j][i]=mat[i][j];
+
         }
     }
+
 }
 
 //se calcula el promedio de los puntos//
@@ -64,15 +67,15 @@ void Pca::M(double **mat, double *mean, int rows, int cols, double **M) {
 
 //Se calcula la matriz de covarianza M*M_tras//
 void Pca::C(double **M, double **tras, int rows, int cols, double **C) {
-    for(int i=0;i<rows;i++){
-        for(int j=0;j<rows;j++){
+    for(int i=0;i<cols;i++){
+        for(int j=0;j<cols;j++){
             C[i][j]=0;
         }
     }
-    for(int i=0;i<rows;i++)
+    for(int i=0;i<cols;i++)
         for(int j=0;j<cols;j++)
-            for(int k=0;k<cols;k++){
-                C[i][j]+=(M[i][k]*tras[k][j]);
+            for(int k=0;k<rows;k++){
+                C[i][j]+=M[i][k]*tras[k][j];
             }
 
 }

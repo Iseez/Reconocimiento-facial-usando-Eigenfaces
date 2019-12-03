@@ -14,7 +14,7 @@ class Pca{
     Pca();
     ~Pca();
 
-    void dat_mat(double **mat,double **tras,int rows, int cols);
+    void tras_mat(double **mat,double **tras,int rows, int cols);
     void mean(double **mat,double *mean,int rows,int cols);
     void M(double **mat,double *mean,int rows, int cols,double **M);
     void C(double **M,double **tras, int rows, int cols,double **C);
